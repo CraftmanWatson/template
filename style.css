@@ -660,8 +660,21 @@ body {
         height: 50px;
     }
     .testimonial-cards-group {
-        flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;   /* 1. Mengubah susunan kartu jadi berderet ke bawah */
+    width: 100%;              /* 2. Reset dari 'max-content' milik desktop */
+    overflow-x: hidden;
+    gap: 20px;                /* 3. Memberikan jarak antar kartu yang konsisten */
+}
+
+.testimonial-card {
+    width: 100%;
+    min-width: 0;             /* 4. Reset 'min-width: 350px' dari desktop agar muat di HP kecil */
+    height: auto;             /* 5. KUNCI UTAMA: Biar tinggi kartu fleksibel mengikuti panjang teks */
+    padding: 20px;            
+    box-sizing: border-box;   /* 6. Memastikan padding tidak merusak/membuat lebar kartu melar */
+}
+
     .testimonial-card {
         width: 100%;
         padding: 15px;
@@ -705,11 +718,5 @@ body {
     }
     .product-name {
         font-size: 20px;
-    }
-    .testimonial-cards-group {
-        overflow-x: hidden;
-    }
-    .testimonial-card {
-        width: 100%;
     }
 }
