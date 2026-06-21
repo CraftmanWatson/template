@@ -609,7 +609,7 @@ body {
     }
     
     .hero-content .hero-headline {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin: 4px 0px;
         letter-spacing: 0.5px;
         font-weight: bold;
@@ -705,5 +705,11 @@ body {
     }
     .product-name {
         font-size: 20px;
+    }
+    .testimonial-cards-group {
+        overflow-x: hidden;
+    }
+    .testimonial-card {
+        width: 100%;
     }
 }
